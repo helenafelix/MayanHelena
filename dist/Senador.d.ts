@@ -1,17 +1,13 @@
-import PoliticoLegislativo from "./PoliticoLegislativo";
-export default class Senador extends PoliticoLegislativo {
+import Politico from "./Politico";
+export default class Senador extends Politico {
     private estado;
     private anoEleito;
-    constructor(nome: string, partido: string, local: string, endereco: string, remuneracao: number, estado: string, anoEleito: number);
+    constructor(nome: string, partido: string, nomeLocalTrabalho: string, enderecoLocalTrabalho: string, remuneracao: number, estado: string, anoEleito: number);
     getEstado(): string;
-    setEstado(x: string): void;
     getAnoEleito(): number;
-    setAnoEleito(x: number): void;
-    getCargo(): string;
-    legislar(): string;
     exerceMandato(): void;
     aprovarAutoridade(): string;
-    julgarCrimeResponsabilidade(): string;
+    julgarCrime(): string;
     representarEstado(): string;
 }
 //# sourceMappingURL=Senador.d.ts.map

@@ -1,22 +1,50 @@
-import PoliticoExecutivo from "./PoliticoExecutivo"
+import Politico from "./Politico"
 
-export default class Presidente extends PoliticoExecutivo {
+export default class Presidente extends Politico {
+    private quantidadeMinistros: number
 
-    constructor(nome: string, partido: string, local: string, endereco: string, remuneracao: number, qtdMinistros: number){
-        super(nome, partido, "Federal", local, endereco, remuneracao, qtdMinistros)
+    constructor(nome: string, partido: string, nomeLocalTrabalho: string, enderecoLocalTrabalho: string, remuneracao: number, quantidadeMinistros: number){
+        super(nome, partido, "Federal", "Executivo", nomeLocalTrabalho, enderecoLocalTrabalho, remuneracao)
+        this.quantidadeMinistros = quantidadeMinistros
     }
 
-    getCargo(): string{ return "Presidente da República" }
+    getQuantidadeMinistros(): number{
+        return this.quantidadeMinistros
+    }
+
+    setQuantidadeMinistros(x: number): void{
+        this.quantidadeMinistros = x
+    }
+
+    nomearMinistro(): string{
+        return this.getNome()+" nomeou um Ministro de Estado."
+    }
+
+    exonerarMinistro(): string{
+        return this.getNome()+" exonerou um Ministro de Estado."
+    }
+
+    comandarFA(): string{
+        return this.getNome()+" comanda as Forças Armadas."
+    }
+
+    representarPais(): string{
+        return this.getNome()+" representou o país em um evento internacional."
+    }
+
+    enviarPPA(): string{
+        return this.getNome()+" elaborou e enviou ao Congresso o Plano Plurianual (PPA) nacional."
+    }
+
+    enviarLDO(): string{
+        return this.getNome()+" elaborou e enviou ao Congresso a Lei de Diretrizes Orçamentárias (LDO) nacional."
+    }
+
+    enviarLOA(): string{
+        return this.getNome()+" elaborou e enviou ao Congresso a proposta de Lei Orçamentária Anual (LOA) nacional."
+    }
 
     exerceMandato(): void{
-        console.log(this.getNome()+" (mandato): propõe, sanciona e veta leis e edita medidas provisórias.")
+        console.log(this.getNome()+" propõe, sanciona e veta leis e edita medidas provisórias.")
     }
-
-    nomearMinistro(): string{ return this.getNome()+" nomeou um Ministro de Estado." }
-    exonerarMinistro(): string{ return this.getNome()+" exonerou um Ministro de Estado." }
-    comandarForcasArmadas(): string{ return this.getNome()+" está comandando as Forças Armadas." }
-    representarPais(): string{ return this.getNome()+" representou o país em um evento internacional." }
-    elaborarEnviarPPA(): string{ return this.getNome()+" elaborou e enviou ao Congresso o Plano Plurianual (PPA) nacional." }
-    elaborarEnviarLDO(): string{ return this.getNome()+" elaborou e enviou ao Congresso a Lei de Diretrizes Orçamentárias (LDO) nacional." }
-    elaborarEnviarLOA(): string{ return this.getNome()+" elaborou e enviou ao Congresso a proposta de Lei Orçamentária Anual (LOA) nacional." }
 }

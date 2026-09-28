@@ -1,1 +1,0 @@
-{"version":3,"file":"PoliticoLegislativo.js","sourceRoot":"","sources":["../src/PoliticoLegislativo.ts"],"names":[],"mappings":";;;;;AAAA,0DAAiC;AAEjC,yBAAkD,SAAQ,kBAAQ;IAE9D,YAAY,IAAY,EAAE,OAAe,EAAE,MAAc,EAAE,KAAa,EAAE,QAAgB,EAAE,WAAmB;QAC3G,KAAK,CAAC,IAAI,EAAE,OAAO,EAAE,MAAM,EAAE,aAAa,EAAE,KAAK,EAAE,QAAQ,EAAE,WAAW,CAAC,CAAA;IAC7E,CAAC;CAIJ"}

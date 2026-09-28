@@ -1,16 +1,18 @@
-import PoliticoExecutivo from "./PoliticoExecutivo";
-export default class Governador extends PoliticoExecutivo {
+import Politico from "./Politico";
+export default class Governador extends Politico {
+    private qtdSecretarios;
     private estado;
-    constructor(nome: string, partido: string, local: string, endereco: string, remuneracao: number, qtdSecretarios: number, estado: string);
+    constructor(nome: string, partido: string, nomeLocalTrabalho: string, enderecoLocalTrabalho: string, remuneracao: number, qtdSecretarios: number, estado: string);
+    getQuantidadeSecretarios(): number;
+    setQuantidadeSecretarios(x: number): void;
     getEstado(): string;
     setEstado(x: string): void;
-    getCargo(): string;
-    exerceMandato(): void;
-    gerirPoliciaMilitar(): string;
+    gerirPM(): string;
     administrarRodovias(): string;
     coordenarEducacaoSaude(): string;
-    elaborarEnviarPPA(): string;
-    elaborarEnviarLDO(): string;
-    elaborarEnviarLOA(): string;
+    enviarPPA(): string;
+    enviarLDO(): string;
+    enviarLOA(): string;
+    exerceMandato(): void;
 }
 //# sourceMappingURL=Governador.d.ts.map

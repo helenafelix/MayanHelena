@@ -25,7 +25,6 @@ export default abstract class Politico {
     getProjetos(): string[];
     addProjeto(titulo: string): void;
     imprimeInfo(): void;
-    abstract getCargo(): string;
     abstract exerceMandato(): void;
 }
 //# sourceMappingURL=Politico.d.ts.map

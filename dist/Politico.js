@@ -19,26 +19,56 @@ class Politico {
         this.remuneracao = remuneracao;
         this.projetos = [];
     }
-    getNome() { return this.nome; }
-    setNome(x) { this.nome = x; }
-    getPartido() { return this.partido; }
-    setPartido(x) { this.partido = x; }
-    getEsfera() { return this.esfera; }
-    setEsfera(x) { this.esfera = x; }
-    getPoder() { return this.poder; }
-    setPoder(x) { this.poder = x; }
-    getNomeLocalTrabalho() { return this.nomeLocalTrabalho; }
-    setNomeLocalTrabalho(x) { this.nomeLocalTrabalho = x; }
-    getEnderecoLocalTrabalho() { return this.enderecoLocalTrabalho; }
-    setEnderecoLocalTrabalho(x) { this.enderecoLocalTrabalho = x; }
-    getRemuneracao() { return this.remuneracao; }
-    setRemuneracao(x) { this.remuneracao = x; }
-    getProjetos() { return this.projetos; }
-    addProjeto(titulo) { this.projetos.push(titulo); }
+    getNome() {
+        return this.nome;
+    }
+    setNome(x) {
+        this.nome = x;
+    }
+    getPartido() {
+        return this.partido;
+    }
+    setPartido(x) {
+        this.partido = x;
+    }
+    getEsfera() {
+        return this.esfera;
+    }
+    setEsfera(x) {
+        this.esfera = x;
+    }
+    getPoder() {
+        return this.poder;
+    }
+    setPoder(x) {
+        this.poder = x;
+    }
+    getNomeLocalTrabalho() {
+        return this.nomeLocalTrabalho;
+    }
+    setNomeLocalTrabalho(x) {
+        this.nomeLocalTrabalho = x;
+    }
+    getEnderecoLocalTrabalho() {
+        return this.enderecoLocalTrabalho;
+    }
+    setEnderecoLocalTrabalho(x) {
+        this.enderecoLocalTrabalho = x;
+    }
+    getRemuneracao() {
+        return this.remuneracao;
+    }
+    setRemuneracao(x) {
+        this.remuneracao = x;
+    }
+    getProjetos() {
+        return this.projetos;
+    }
+    addProjeto(titulo) {
+        this.projetos.push(titulo);
+    }
     imprimeInfo() {
-        console.log(this.getCargo() + ": " + this.nome + " (" + this.partido + ") | " + this.esfera + " / " + this.poder);
-        console.log("Local: " + this.nomeLocalTrabalho + " - " + this.enderecoLocalTrabalho);
-        console.log("Remuneração: R$" + this.remuneracao + " | Projetos: " + this.projetos.length);
+        console.log(this.nome + "  " + this.partido + "  " + this.esfera + "  " + this.poder + "  " + this.nomeLocalTrabalho + "  " + this.enderecoLocalTrabalho + "  R$" + this.remuneracao + "  projetos: " + this.projetos.length);
     }
 }
 exports.default = Politico;
